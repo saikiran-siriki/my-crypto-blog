@@ -1,7 +1,7 @@
 export default {
   // The blog's title as it appears in the layout header, and in the document
   // <title> tag.
-  title: "Sai's Crypto Blog",
+  title: "Web3 and beyond",
 
   author: "0xSaiK",
   description: "Series of posts about Web3",
