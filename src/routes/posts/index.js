@@ -3,6 +3,7 @@ import * as Navi from 'navi'
 import { join } from 'path'
 import { sortBy } from 'lodash'
 import slugify from 'slugify'
+import React from 'react'
 
 // Get a list of all posts, that will not be loaded until the user
 // requests them.
@@ -39,7 +40,7 @@ postDetails = sortBy(postDetails, ['slug']).reverse()
 let posts = postDetails.map(({ slug, pathname, date }, i) => ({
   getPage: Navi.map(async () => {
     let { default: post } = await importPost(pathname)
-    let { title, getContent, ...meta } = post
+    let { title, description, ogImage, getContent, ...meta } = post
     let previousSlug, previousPost, nextSlug, nextPost
 
     if (i !== 0) {
@@ -56,6 +57,10 @@ let posts = postDetails.map(({ slug, pathname, date }, i) => ({
 
     return Navi.route({
       title,
+      head: <>
+      <meta name="description" content={description} />
+      <meta property="og:image" content={ogImage}/>
+    </>,
       getData: (req, context) => ({
         date,
         pathname,
