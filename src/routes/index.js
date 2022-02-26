@@ -51,6 +51,10 @@ let chunkPagePairs = chunks.map((chunk, i) => [
 
     return route({
       title: pageTitle,
+      head: <>
+      <meta name="description" content={siteMetadata.description} />
+      <meta property="og:image" content={siteMetadata.ogImage}/>
+    </>,
       view: (
         <BlogIndexPage
           blogRoot={context.blogRoot}

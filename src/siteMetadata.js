@@ -4,7 +4,8 @@ export default {
   title: "Sai's Crypto Blog",
 
   author: "0xSaiK",
-  description: "",
+  description: "Series of posts about Web3",
+  ogImage: "/assets/WhyBTC.jpeg",
 
   // The number of posts to a page on the site index.
   indexPageSize: 10,
