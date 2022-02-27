@@ -13,8 +13,7 @@ function Bio(props) {
       <p>
         This blog will be a series of posts on Web3 by
         <br />
-        <a href="https://twitter.com/0xSaiK">0xSaiK</a>.
-       x
+        <a href="https://twitter.com/0xSaiK">0xSaiK</a>
       </p>
     </div>
   )
